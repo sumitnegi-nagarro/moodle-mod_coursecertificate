@@ -29,4 +29,8 @@ $observers = [
         'eventname' => '\tool_certificate\event\template_deleted',
         'callback' => mod_coursecertificate_observer::class . '::on_template_deleted',
     ],
+    [
+        'eventname' => '\local_recompletion\event\completion_reset',
+        'callback' => '\mod_coursecertificate\observer\revoke_certificate::on_completion_reset'
+    ]
 ];
